@@ -1,11 +1,31 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+/* search loading style */
 #loader {
 	background: url(../img/Book.gif) no-repeat center;
 	height: 80vh;
 	display: none;
 }
-
-.book-cover {
-	height: 330px;
-	padding: 20px;
-	border-radius: 25px;
+#found-result {
+	color: #1111a0;
 }
+/* book style */
+.col > div {
+	background: #d4d8da5b;
+	color: #000000b9;
+	height: 650px;
+}
+.col .card-title {
+	color: #000;
+}
+/* book cover image style */
+.book-cover {
+	height: 310px;
+}
+
+/* End */
