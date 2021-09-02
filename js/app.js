@@ -24,7 +24,7 @@ const searchValue = () => {
 
 // load API result 
 const loadResuls = async input => {
-    const res = await fetch(`http://openlibrary.org/search.json?q=${input}`);
+    const res = await fetch(`https://openlibrary.org/search.json?q=${input}`);
     const data = await res.json();
     if (data.numFound === 0) {
         foundResult.innerText = "No result's found";
