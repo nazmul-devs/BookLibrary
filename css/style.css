@@ -3,3 +3,9 @@
 	height: 80vh;
 	display: none;
 }
+
+.book-cover {
+	height: 330px;
+	padding: 20px;
+	border-radius: 25px;
+}

@@ -44,7 +44,7 @@ const displaData = books => {
         if (book.cover_i === undefined) {
             imgUrl = "img/book-cover-1.jpg";
         } else {
-            imgUrl = `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`;
+            imgUrl = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
         }
           
         // create div
@@ -52,12 +52,12 @@ const displaData = books => {
         div.classList.add('col');
         div.innerHTML = `
         <div class="card h-100">
-            <img src="${imgUrl}" alt="">
+            <img class="book-cover" src="${imgUrl}" alt="">
             <div class="card-body">
-                <h5 class="card-title fw-bold">${book.title}</h5>
-                <h5 class="fs-5">Author: ${book.author_name}</h5>
-                <h5 class="fs-5">published: ${book.publish_date}</h5> 
-                <h5 class="fs-5">publisher: ${book.publisher}</h5>
+                <h5 class="card-title fw-bold mb-2">${book.title}</h5>
+                <h5 class="fs-5">Author: ${book.author_name ? book.author_name: 'Not available'}</h5>
+                <h5 class="fs-5">publish year: ${book.first_publish_year ? book.first_publish_year: 'Not available'}</h5> 
+                <h5 class="fs-5">publisher: ${book.publisher ? book.publisher[0] : 'Not available'}</h5>
             </div>
         </div>
     `;
@@ -69,14 +69,3 @@ const displaData = books => {
     loadingToggle('none');
 }
 
-// get image
-const getImg = id => {
-    if (id === undefined) {
-        console.log('hwllo');
-    } else {
-        fetch()
-            .then(res => res.json())
-            .then(data => console.log(data));
-    }
-    
-}
